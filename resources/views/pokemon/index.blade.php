@@ -2,6 +2,18 @@
 @extends('layouts.base')
 @section('content')
 
+@can('create', App\Models\Pokemon::class)
+        <div class="flex items-start ">
+            <div class="py-8 mb-5 p-4 ">
+                <a href="{{url('pokemon/create')}}" class=""></a>
+
+
+            </div>
+        </div>
+    @endcan
+
+
+
 <div class="flex flex-wrap justify-center mt-10">
     @foreach($pokemon as $entity)
     
